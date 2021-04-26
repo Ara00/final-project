@@ -1,0 +1,77 @@
+import turtle
+from turtle import Turtle 
+import time 
+from random import randint
+
+#setting up the window 
+wn = turtle.Screen()
+turtle.color("white")
+
+turtle.speed(0)
+turtle.penup()
+turtle.setpos(-120, 150)
+turtle.penup()
+
+#finish line
+stamp_size = 20
+square_size = 15
+finish_line = 200
+
+turtle.color("black")
+turtle.shape("square")
+turtle.penup()
+
+for i in range(10):
+  turtle.setpos(finish_line, (140-(i * square_size *2)))
+  turtle.stamp()
+  
+for x in range(10):
+  turtle.setpos(finish_line + square_size, (140-square_size)-(x * square_size *2))
+  turtle.stamp()
+
+turtle.hideturtle()
+
+#turtle 1
+tip = Turtle()
+tip.speed(0)
+tip.color("yellow")
+tip.shape("turtle")
+tip.penup()
+tip.goto(-250,100)
+tip.pendown()
+
+#turtle 2
+tip2 = Turtle()
+tip2.speed(0)
+tip.color("cyan")
+tip2.shape("turtle")
+tip2.penup()
+tip2.goto(-250,50)
+tip2.pendown()
+
+#turtle 3
+tip3 = Turtle()
+tip3.speed(0)
+tip3.color("magenta")
+tip3.shape("turtle")
+tip3.penup()
+tip3.goto(-250,0)
+tip3.pendown()
+
+#turtle 4
+tip4 = Turtle()
+tip4.speed(0)
+tip4.color("green")
+tip4.shape("turtle")
+tip4.penup()
+tip4.goto(-250,-50)
+tip4.pendown()
+
+
+time.sleep(1)
+
+for i in range(145):
+  tip.forward(randint(1,5))
+  tip2.forward(randint(1,5))
+  tip3.forward(randint(1,5))
+  tip4.forward(randint(1,5))
